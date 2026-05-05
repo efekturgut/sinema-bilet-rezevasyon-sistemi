@@ -11,7 +11,7 @@ import seatRoutes from "./routes/seatRoutes.js";
 
 dotenv.config();
 
-console.log("SERVER TMDB_API_KEY:", process.env.TMDB_API_KEY);
+
 
 const app = express();
 
