@@ -17,7 +17,7 @@ const MyReservations = () => {
         setLoading(true);
 
         const response = await axios.get(
-          "http://localhost:5000/api/reservations"
+          "https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/reservations"
         );
 
         const userReservations = response.data.reservations.filter(

@@ -17,8 +17,8 @@ const AdminShowtimes = () => {
 
   const fetchData = async () => {
     try {
-      const movieRes = await axios.get("http://localhost:5000/api/movies");
-      const showtimeRes = await axios.get("http://localhost:5000/api/showtimes");
+      const movieRes = await axios.get("https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/movies");
+      const showtimeRes = await axios.get("https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/showtimes");
 
       setMovies(movieRes.data.movies || []);
       setShowtimes(showtimeRes.data.showtimes || []);
@@ -42,7 +42,7 @@ const AdminShowtimes = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/showtimes", {
+      await axios.post("https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/showtimes", {
         movieId: Number(formData.movieId),
         hall: formData.hall,
         date: formData.date,
@@ -69,7 +69,7 @@ const AdminShowtimes = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/showtimes/${id}`);
+      await axios.delete(`https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/showtimes/${id}`);
       fetchData();
     } catch (error) {
       console.error("Seans silinemedi:", error.response?.data || error);

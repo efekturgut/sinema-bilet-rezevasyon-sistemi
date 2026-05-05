@@ -13,7 +13,7 @@ const Movies = () => {
       try {
         setLoading(true);
 
-        const response = await axios.get("http://localhost:5000/api/movies");
+        const response = await axios.get("https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/movies");
 
         setMovies(response.data.movies || []);
       } catch (error) {

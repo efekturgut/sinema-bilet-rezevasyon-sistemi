@@ -24,8 +24,8 @@ const Home = () => {
       try {
         setLoadingMovies(true);
 
-        const nowRes = await fetch("http://localhost:5000/api/movies/now-showing");
-        const comingRes = await fetch("http://localhost:5000/api/movies/coming-soon");
+        const nowRes = await fetch("https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/movies/now-showing");
+        const comingRes = await fetch("https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/movies/coming-soon");
 
         const nowData = await nowRes.json();
         const comingData = await comingRes.json();

@@ -20,7 +20,7 @@ const AdminDashboard = () => {
         setLoading(true);
 
         const response = await axios.get(
-          "http://localhost:5000/api/admin/stats"
+          "https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/admin/stats"
         );
 
         setStats(response.data);

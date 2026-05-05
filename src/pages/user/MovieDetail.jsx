@@ -14,7 +14,7 @@ const MovieDetail = () => {
         setLoading(true);
 
         const response = await axios.get(
-          `http://localhost:5000/api/movies/${id}`
+          `https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/movies/${id}`
         );
 
         setMovie(response.data);

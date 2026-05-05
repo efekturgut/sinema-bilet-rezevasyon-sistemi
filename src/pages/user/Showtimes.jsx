@@ -16,11 +16,11 @@ const Showtimes = () => {
       try {
         setLoading(true);
 
-        const movieRes = await axios.get(`http://localhost:5000/api/movies/${id}`);
+        const movieRes = await axios.get(`https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/movies/${id}`);
         setMovie(movieRes.data);
 
         const showtimeRes = await axios.get(
-          `http://localhost:5000/api/showtimes/movie/${id}`
+          `https://sinema-bilet-rezevasyon-sistemi-production.up.railway.app/api/showtimes/movie/${id}`
         );
 
         setShowtimes(showtimeRes.data.showtimes);
